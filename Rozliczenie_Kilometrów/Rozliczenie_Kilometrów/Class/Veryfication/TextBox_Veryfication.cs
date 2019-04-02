@@ -10,28 +10,11 @@ namespace Settlement_of_kilometers.Class.Veryfication
 {
     class TextBox_Veryfication
     {
-        internal bool VeryficationInitial_value_of_kilometers()
+        internal bool VeryficationTextBoxValue(string _string)
         { 
-            Regex regex = new Regex(Constants.PatternRegexVeryficationInitial_value_of_kilometers);  // wyrażenie regularne 
-
-
-            return true;
-        }
-
-        internal bool VeryficationThe_final_value_of_kilometers()
-        {
-            Regex regex = new Regex(Constants.PatternRegexVeryficationThe_final_value_of_kilometers);  // wyrażenie regularne 
-
-
-            return true;
-        }
-
-        internal bool VeryficationCapacity()
-        {
-            Regex regex = new Regex(Constants.PatternRegexVeryficationCapacity);  // wyrażenie regularne 
-
-
-            return true;
+            Regex regex = new Regex(Constants.PatternRegexVeryficationEnteredData);  // wyrażenie regularne 
+            bool result = regex.IsMatch(_string);
+            return result;
         }
     }
 }
