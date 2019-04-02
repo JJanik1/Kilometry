@@ -26,7 +26,7 @@ namespace Settlement_of_kilometers
 
         private void Initial_value_of_kilometers_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            
         }
 
         private void The_final_value_of_kilometers_TextChanged(object sender, TextChangedEventArgs e)
