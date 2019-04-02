@@ -15,7 +15,7 @@ namespace Settlement_of_kilometers.Class.Calculations
         {
             get
             {
-               // string[] linesStart = File.ReadAllLines(StartKilometersFile);
+                // string[] linesStart = File.ReadAllLines(StartKilometersFile);
                 //string[] linesEnd = File.ReadAllLines(EndKilometersFile);
 
                 double result = Convert.ToDouble(linesEnd[linesEnd.Length - 1]) -
