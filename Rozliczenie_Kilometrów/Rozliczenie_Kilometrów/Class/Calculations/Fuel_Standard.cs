@@ -9,7 +9,6 @@ namespace Settlement_of_kilometers.Class.Calculations
 {
     //klasa wyliczająca normę paliwa
     class Fuel_Standard
-
     {
         internal double FuelStandart
         {
