@@ -1,0 +1,19 @@
+﻿<Window x:Class="Settlement_of_kilometers.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Settlement_of_kilometers"
+        mc:Ignorable="d"
+        Title="Home" Height="285.927" Width="195.464" ResizeMode="CanMinimize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="43*"/>
+            <ColumnDefinition Width="145*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button x:Name="AddRide"  Content="Dodaj przejazd" HorizontalAlignment="Center" Margin="34,25,34.8,0" VerticalAlignment="Top" Width="120" Height="40" Click="AddRide_Click" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <Button x:Name="RideList" Content="Lista przejazdow" HorizontalAlignment="Center" Margin="35,87,33.8,0" VerticalAlignment="Top" Width="120" Height="40" FontWeight="Bold" Click="RideList_Click" Grid.ColumnSpan="2"/>
+
+    </Grid>
+</Window>
