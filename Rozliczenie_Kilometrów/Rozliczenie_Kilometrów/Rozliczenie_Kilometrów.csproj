@@ -78,6 +78,7 @@
     <Compile Include="Class\Calculations\Fuel_Used.cs" />
     <Compile Include="Class\Calculations\Traveled_Way.cs" />
     <Compile Include="Class\Constatnts\Constants.cs" />
+    <Compile Include="Class\Database\Database.cs" />
     <Compile Include="Class\DriveList\Drive_List.cs" />
     <Compile Include="Class\Veryfication\TextBox_Veryfication.cs" />
     <Compile Include="RideList.xaml.cs">

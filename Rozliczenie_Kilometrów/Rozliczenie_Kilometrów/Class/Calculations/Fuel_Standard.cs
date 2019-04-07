@@ -22,14 +22,14 @@ namespace Settlement_of_kilometers.Class.Calculations
         //  }
 
 
-        //internal async Task<double> FuelStandart(double capacity)
-        //{
-        //var result = Task.Run(() =>
-        //{
-        //var r = capacity * 0.4 + 23;
-        //  });
+        internal async Task<double> FuelStandart(double capacity)
+        {
+        var result = Task.Run(() =>
+        {
+        var r = capacity * 0.4 + 23;
+         });
 
-        // return Task;
-        // }
+        return Task;
+        }
     }
 }
