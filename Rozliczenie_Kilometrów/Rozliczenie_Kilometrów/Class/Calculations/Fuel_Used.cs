@@ -20,16 +20,12 @@ namespace Settlement_of_kilometers.Class.Calculations
         // }
         // }
 
-        internal async Task<double> FuelStandart(double capacity)
+        internal double FuelStandart(double fuelStandard, double traveledWay)
         {
-            PrzejazdyEntities przejazdyEntities=new PrzejazdyEntities();
-            var result = Task.Run(() =>
-            {
-                
-                var r = przejazdyEntities. / 100 * Fuel_Standard;
-            });
 
-            return Task;
+
+
+            return traveledWay / 100 * fuelStandard;
         }
 
 

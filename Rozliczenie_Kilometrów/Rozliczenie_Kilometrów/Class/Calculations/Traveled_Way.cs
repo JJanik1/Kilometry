@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Navigation;
 using Rozliczenie_Kilometrów.Class.Database;
 
 namespace Settlement_of_kilometers.Class.Calculations
@@ -26,7 +27,11 @@ namespace Settlement_of_kilometers.Class.Calculations
         //  }
         //  }
 
-        PrzejazdyEntities przejazdyEntities = new PrzejazdyEntities();
+        internal double TraveledWay(double startRoad, double endRoad)
+        {
+
+            return endRoad - startRoad;
+        }
 
 
 
