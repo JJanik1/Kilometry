@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Rozliczenie_Kilometrów.Class.Database
 {
-    class Database
+    class Number_of_trips
     {
     }
 }

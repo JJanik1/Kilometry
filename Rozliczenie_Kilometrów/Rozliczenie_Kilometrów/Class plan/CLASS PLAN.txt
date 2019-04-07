@@ -18,4 +18,5 @@ d) Calculations:
 - Traveled_Way - klasa odpowiadaj¹ca za obliczenie iloœci przejechanych kilometrów
 
 e) Database:
-- Database - klasa po³¹czeniow¹ z baz¹ danych
+- Number_of_kilometres - zbieramy z bazy danych iloœæ przejechanych dotychczas kilometrów
+- Number_of_trips - zbieramy z bazy danych iloœæ dotychczasowych przejazdów

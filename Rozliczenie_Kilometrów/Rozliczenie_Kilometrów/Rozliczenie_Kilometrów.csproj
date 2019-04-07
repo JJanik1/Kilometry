@@ -35,8 +35,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -78,7 +87,26 @@
     <Compile Include="Class\Calculations\Fuel_Used.cs" />
     <Compile Include="Class\Calculations\Traveled_Way.cs" />
     <Compile Include="Class\Constatnts\Constants.cs" />
-    <Compile Include="Class\Database\Database.cs" />
+    <Compile Include="Class\Database\Number_of_kilometres.cs" />
+    <Compile Include="Class\Database\Number_of_trips.cs" />
+    <Compile Include="Class\Database\Rozliczenie.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rozliczenie.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Database\Rozliczenie.cs">
+      <DependentUpon>Rozliczenie.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Database\Rozliczenie.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rozliczenie.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Database\Rozliczenie1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rozliczenie.tt</DependentUpon>
+    </Compile>
     <Compile Include="Class\DriveList\Drive_List.cs" />
     <Compile Include="Class\Veryfication\TextBox_Veryfication.cs" />
     <Compile Include="RideList.xaml.cs">
@@ -107,6 +135,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="Class\Database\Rozliczenie.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Rozliczenie.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Class\Database\Rozliczenie.edmx.diagram">
+      <DependentUpon>Rozliczenie.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -120,6 +156,21 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Class plan\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Class\Database\Rozliczenie.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Rozliczenie.Context.cs</LastGenOutput>
+      <DependentUpon>Rozliczenie.edmx</DependentUpon>
+    </Content>
+    <Content Include="Class\Database\Rozliczenie.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Rozliczenie.edmx</DependentUpon>
+      <LastGenOutput>Rozliczenie1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
