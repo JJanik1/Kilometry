@@ -16,3 +16,6 @@ d) Calculations:
 - Fuel_Standard - klasa odpowiadaj¹ca za wyliczeniê normy paliwa
 - Fuel_Used - klasa odpowiadaj¹ca za wyliczenie zu¿ycia paliwa
 - Traveled_Way - klasa odpowiadaj¹ca za obliczenie iloœci przejechanych kilometrów
+
+e) Database:
+- Database - klasa po³¹czeniow¹ z baz¹ danych
