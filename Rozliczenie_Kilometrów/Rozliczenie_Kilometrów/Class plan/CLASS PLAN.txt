@@ -20,3 +20,6 @@ d) Calculations:
 e) Database:
 - Number_of_kilometres - zbieramy z bazy danych iloœæ przejechanych dotychczas kilometrów
 - Number_of_trips - zbieramy z bazy danych iloœæ dotychczasowych przejazdów
+
+f) Statistics:
+Tutaj bêd¹ klasy odpowiedzialne za wyœwietlanie statystyk i wykresów graficznych np. œrednie przejechane wartoœci w km itp.
