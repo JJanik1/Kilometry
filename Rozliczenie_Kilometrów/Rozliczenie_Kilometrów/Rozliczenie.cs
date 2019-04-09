@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Rozliczenie_Kilometrów.Class.Database
+namespace Rozliczenie_Kilometrów
 {
     using System;
     using System.Collections.Generic;
@@ -19,5 +19,6 @@ namespace Rozliczenie_Kilometrów.Class.Database
         public Nullable<decimal> Fuel_Used { get; set; }
         public Nullable<decimal> Fuel_Standard { get; set; }
         public System.DateTime Data_ { get; set; }
+        public byte[] Statistics { get; set; }
     }
 }

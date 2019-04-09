@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Rozliczenie_Kilometrów.Class.Database
+namespace Rozliczenie_Kilometrów
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class PrzejazdyEntities : DbContext
+    public partial class PrzejazdyEntities1 : DbContext
     {
-        public PrzejazdyEntities()
-            : base("name=PrzejazdyEntities")
+        public PrzejazdyEntities1()
+            : base("name=PrzejazdyEntities1")
         {
         }
     

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Rozliczenie_Kilometrów;
 using Rozliczenie_Kilometrów.Class.Database;
 
 namespace Settlement_of_kilometers.Class.DriveList
@@ -11,6 +12,7 @@ namespace Settlement_of_kilometers.Class.DriveList
     class Drive_List
     {
 
-        PrzejazdyEntities przejazdyEntities = new PrzejazdyEntities();
+        PrzejazdyEntities1 _przejazdyEntities1 = new PrzejazdyEntities1();
     }
+
 }

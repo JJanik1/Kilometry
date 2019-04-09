@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\janik\source\repos\Kilometry\Rozliczenie_Kilometrów\Rozliczenie_Kilometrów\Class\Database\Rozliczenie.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\janik\source\repos\Kilometry\Rozliczenie_Kilometrów\Rozliczenie_Kilometrów\Rozliczenie.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

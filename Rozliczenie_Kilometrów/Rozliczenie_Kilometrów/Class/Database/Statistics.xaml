@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Rozliczenie_Kilometrów.Class.Database"
         mc:Ignorable="d"
         Title="Statistics" Height="450" Width="800">
-    <Grid Background="DarkGray"> 
+    <Grid Background="DarkGray">
         <Button Content="Button" HorizontalAlignment="Left" Margin="711,357,0,0" VerticalAlignment="Top" Width="54" Height="53" Foreground="{x:Null}" Click="Button_Click" RenderTransformOrigin="0.848,-0.027">
             <Button.Background>
                 <ImageBrush ImageSource="/Rozliczenie_Kilometrów;component/icons8-go-back-50.png" Stretch="Uniform"/>
@@ -15,6 +15,7 @@
                 <ImageBrush/>
             </Button.BorderBrush>
         </Button>
+        <TextBox HorizontalAlignment="Left" Height="316" Margin="34,36,0,0" TextWrapping="Wrap" Text="Tutaj będą statystyki w formie wykresów graficznych" VerticalAlignment="Top" Width="731" FontSize="35"/>
 
     </Grid>
 </Window>

@@ -11,6 +11,6 @@ namespace Rozliczenie_Kilometrów.Class.Database
     class Number_of_trips
     {
 
-        PrzejazdyEntities przejazdyEntities = new PrzejazdyEntities();
+        PrzejazdyEntities1 _przejazdyEntities1 = new PrzejazdyEntities1();
     }
 }

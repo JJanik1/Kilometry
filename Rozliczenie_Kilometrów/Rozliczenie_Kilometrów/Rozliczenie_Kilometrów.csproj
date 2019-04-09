@@ -64,6 +64,25 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Class\Statistics\Statistics.cs" />
+    <Compile Include="Rozliczenie.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rozliczenie.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Rozliczenie.cs">
+      <DependentUpon>Rozliczenie.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Rozliczenie.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rozliczenie.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Rozliczenie1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rozliczenie.tt</DependentUpon>
+    </Compile>
     <Page Include="Add_Ride.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -93,24 +112,6 @@
     <Compile Include="Class\Constatnts\Constants.cs" />
     <Compile Include="Class\Database\Number_of_kilometres.cs" />
     <Compile Include="Class\Database\Number_of_trips.cs" />
-    <Compile Include="Class\Database\Rozliczenie.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Rozliczenie.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Class\Database\Rozliczenie.cs">
-      <DependentUpon>Rozliczenie.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Class\Database\Rozliczenie.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Rozliczenie.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Class\Database\Rozliczenie1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Rozliczenie.tt</DependentUpon>
-    </Compile>
     <Compile Include="Class\Database\Statistics.xaml.cs">
       <DependentUpon>Statistics.xaml</DependentUpon>
     </Compile>
@@ -142,17 +143,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="Class\Database\Rozliczenie.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Rozliczenie.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Class\Database\Rozliczenie.edmx.diagram">
-      <DependentUpon>Rozliczenie.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <EntityDeploy Include="Rozliczenie.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Rozliczenie.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Rozliczenie.edmx.diagram">
+      <DependentUpon>Rozliczenie.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -165,19 +166,19 @@
     <Folder Include="Class plan\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Class\Database\Rozliczenie.Context.tt">
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Rozliczenie.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Rozliczenie.Context.cs</LastGenOutput>
       <DependentUpon>Rozliczenie.edmx</DependentUpon>
+      <LastGenOutput>Rozliczenie.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Class\Database\Rozliczenie.tt">
+    <Content Include="Rozliczenie.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Rozliczenie.edmx</DependentUpon>
       <LastGenOutput>Rozliczenie1.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
