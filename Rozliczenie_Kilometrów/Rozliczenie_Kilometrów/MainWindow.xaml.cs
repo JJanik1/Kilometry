@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Rozliczenie_Kilometrów.Class.Database;
 
 namespace Settlement_of_kilometers
 {
@@ -36,6 +37,13 @@ namespace Settlement_of_kilometers
         {
             RideList rideList = new RideList();
             rideList.Show();
+            this.Close();
+        }
+
+        private void Statistics_Click(object sender, RoutedEventArgs e)
+        {
+            Statistics statistics  = new Statistics();
+            statistics.Show();
             this.Close();
         }
     }
