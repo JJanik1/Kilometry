@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-//klasa ukazująca statystyki/średnie
+//klasa ukazująca statystyki/średnie pobierane z bazy danych
 namespace Rozliczenie_Kilometrów.Class.Statistics
 {
     

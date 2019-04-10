@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-//klasa umowżliwiająca połączenie się z bazą danych
+//klasa pobierająca i wyświetlająca liczbę przejazdów (całość matematycznie) - połączone ze statystykami
 
 namespace Rozliczenie_Kilometrów.Class.Database
 {

@@ -15,7 +15,10 @@
                 <ImageBrush/>
             </Button.BorderBrush>
         </Button>
-        <TextBox HorizontalAlignment="Left" Height="316" Margin="34,36,0,0" TextWrapping="Wrap" Text="Tutaj będą statystyki w formie wykresów graficznych" VerticalAlignment="Top" Width="731" FontSize="35"/>
-
+        <TextBox HorizontalAlignment="Left" Height="400" Margin="10,10,0,0" TextWrapping="Wrap" Text="Tutaj będą statystyki w formie wykresów graficznych, zapytać o bibliotekę graficzną ;)" VerticalAlignment="Top" Width="467" FontSize="35" TextChanged="TextBox_TextChanged"/>
+        <Label Content="Łączna ilość przejechanych kilometrów:" HorizontalAlignment="Left" Margin="529,31,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Łączna ilość przejazdów:" HorizontalAlignment="Left" Margin="572,109,0,0" VerticalAlignment="Top" FontWeight="Bold" RenderTransformOrigin="0.497,2.055"/>
+        <Label Content="Wynik" HorizontalAlignment="Center" Margin="589,140,74.6,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Width="130"/>
+        <Label Content="Wynik" HorizontalAlignment="Center" Margin="589,62,74.6,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Width="130"/>
     </Grid>
 </Window>

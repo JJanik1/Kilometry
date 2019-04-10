@@ -34,5 +34,10 @@ namespace Rozliczenie_Kilometrów.Class.Database
             mainWindow.Show();
             this.Close();
         }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
