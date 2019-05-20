@@ -5,12 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 //klasa pobierająca i wyświetlająca liczbę przejazdów (całość matematycznie) - połączone ze statystykami
-
+//z tym mam problem
 namespace Rozliczenie_Kilometrów.Class.Database
 {
     class Number_of_trips
     {
 
-        PrzejazdyEntities1 _przejazdyEntities1 = new PrzejazdyEntities1();
+        PrzejazdyEntities4 _przejazdyEntities1 = new PrzejazdyEntities4();
     }
 }

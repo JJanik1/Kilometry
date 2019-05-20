@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.DataVisualization.Charting;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -23,6 +24,24 @@ namespace Rozliczenie_Kilometrów.Class.Database
         public Statistics()
         {
             InitializeComponent();
+            SetSumOfKilometers();
+            SetSumOfTravelers();
+            LoadPieChartData();
+            LoadScatterChartData();
+        }
+
+        private void SetSumOfTravelers()
+        {
+            // zlicza liczbę przejazdów
+            PrzejazdyEntities4 context = new PrzejazdyEntities4();
+            SumOfTravelers.Content = context.Rozliczenie.Count().ToString();
+        }
+
+        private void SetSumOfKilometers()
+        {
+            // zlicza liczbę przejechanych kilometrów
+            PrzejazdyEntities4 context = new PrzejazdyEntities4();
+            SumOfKilometers.Content = context.Rozliczenie.Sum(x => x.Traveled_Way).ToString() + " km";
         }
 
 
@@ -35,9 +54,40 @@ namespace Rozliczenie_Kilometrów.Class.Database
             this.Close();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void LoadPieChartData()
         {
+            PrzejazdyEntities4 context = new PrzejazdyEntities4();
 
+            // Sortuje malejąco datę i bierze 5 najnowszych przejazdów
+            var przejazdy = context.Rozliczenie.ToList().OrderByDescending(x => x.Data_).Take(5).ToList();
+
+            var chartDate = new List<KeyValuePair<string, int>>();
+
+            foreach (var przejazd in przejazdy)
+            {
+                // dodaje przejazd z datą i liczbą kilometrów do Listy
+                chartDate.Add(new KeyValuePair<string, int>(przejazd.Data_.Value.ToString("dd/MM/yyyy"), Convert.ToInt32(przejazd.Traveled_Way)));
+            }
+            // Dodaje dane do wykresu
+            ((System.Windows.Controls.DataVisualization.Charting.PieSeries) mcChart.Series[0]).ItemsSource = chartDate;
+        }
+
+        private void LoadScatterChartData()
+        {
+            PrzejazdyEntities4 context = new PrzejazdyEntities4();
+
+            // Sortuje malejąco datę i bierze 5 najnowszych przejazdów
+            var przejazdy = context.Rozliczenie.ToList().OrderByDescending(x => x.Data_).Take(5).ToList();
+
+            var chartDate = new List<KeyValuePair<string, int>>();
+
+            foreach (var przejazd in przejazdy)
+            {
+                // dodaje przejazd z datą i zużyciem paliwa do Listy
+                chartDate.Add(new KeyValuePair<string, int>(przejazd.Data_.Value.ToString("dd/MM/yyyy"), Convert.ToInt32(przejazd.Fuel_Used)));
+            }
+            // Dodaje dane do wykresu
+            ((ColumnSeries)mcChart2.Series[0]).ItemsSource = chartDate;
         }
     }
 }

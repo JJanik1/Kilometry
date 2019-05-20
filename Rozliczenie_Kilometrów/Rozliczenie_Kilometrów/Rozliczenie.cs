@@ -18,7 +18,8 @@ namespace Rozliczenie_Kilometrów
         public Nullable<decimal> Traveled_Way { get; set; }
         public Nullable<decimal> Fuel_Used { get; set; }
         public Nullable<decimal> Fuel_Standard { get; set; }
-        public System.DateTime Data_ { get; set; }
+        public Nullable<System.DateTime> Data_ { get; set; }
         public byte[] Statistics { get; set; }
+        public int Key { get; set; }
     }
 }

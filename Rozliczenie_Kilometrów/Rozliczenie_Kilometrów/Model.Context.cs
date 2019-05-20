@@ -13,10 +13,10 @@ namespace Rozliczenie_Kilometrów
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class PrzejazdyEntities1 : DbContext
+    public partial class PrzejazdyEntities4 : DbContext
     {
-        public PrzejazdyEntities1()
-            : base("name=PrzejazdyEntities1")
+        public PrzejazdyEntities4()
+            : base("name=PrzejazdyEntities4")
         {
         }
     

@@ -5,22 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Settlement_of_kilometers"
         mc:Ignorable="d"
-        Title="Add_Ride" Height="450" Width="800">
+        Title="Dodaj przejazd" Height="450" Width="800">
     <Grid Background="DarkGray" RenderTransformOrigin="0.497,0.518">
         <Grid Margin="10,-10,-10.4,10">
-            <Calendar x:Name="Calendar" HorizontalAlignment="Left" Margin="35,51,0,0" VerticalAlignment="Top"/>
+            <Calendar x:Name="Calendar" HorizontalAlignment="Left" Margin="35,51,0,0" VerticalAlignment="Top" SelectionMode="SingleDate" SelectedDatesChanged="Calendar_OnSelectedDatesChanged"/>
             <Label Content="Data:" FontWeight="Bold" Margin="106,20,0,369" HorizontalAlignment="Left" RenderTransformOrigin="1.29,0.537" Width="57"/>
         </Grid>
-        <Button x:Name="AddRide" Content="Dodaj przejazd" HorizontalAlignment="Left" Margin="309,98,0,0" VerticalAlignment="Top" Width="101" FontWeight="Bold" Height="36"/>
+        <Button x:Name="AddRide" Content="Dodaj przejazd" HorizontalAlignment="Left" Margin="309,98,0,0" VerticalAlignment="Top" Width="101" FontWeight="Bold" Height="36" Click="AddRide_Click"/>
         <Grid>
 
         </Grid>
         <Grid>
-            <Label Content="Początkowa ilość przejechanych km:" HorizontalAlignment="Left" Margin="438,20,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Content="Początkowa przejechana droga (km):" HorizontalAlignment="Left" Margin="438,20,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
             <TextBox x:Name="Initial_value_of_kilometers" HorizontalAlignment="Left" Height="23" Margin="438,45,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="230" RenderTransformOrigin="-0.105,-0.56" TextChanged="Initial_value_of_kilometers_TextChanged"/>
-            <Label Content="Wartość końcowa kilometrów:" Margin="459,85,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontWeight="Bold"/>
+            <Label Content="Wartość końcowa (km):" Margin="471,85,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontWeight="Bold"/>
             <TextBox x:Name="The_final_value_of_kilometers"   HorizontalAlignment="Left" Height="23" Margin="438,111,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="230" TextChanged="The_final_value_of_kilometers_TextChanged"/>
-            <Label Content="Ładowność:" HorizontalAlignment="Left" Margin="520,151,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Content="Ładowność (tony):" HorizontalAlignment="Left" Margin="488,151,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
             <TextBox x:Name="Capacity" HorizontalAlignment="Left" Height="23" Margin="438,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" TextChanged="Capacity_TextChanged"/>
         </Grid>
         <Grid>
@@ -28,9 +28,9 @@
             <Label Content="Przebyta droga:" HorizontalAlignment="Left" Margin="60,271,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
             <Label Content="Norma zużytego paliwa:" HorizontalAlignment="Left" Margin="269,271,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
             <Label Content="Ilość zużytego paliwa:" HorizontalAlignment="Left" Margin="570,277,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
-            <Label Content="Droga" HorizontalAlignment="Center" Margin="60,303,603.6,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Width="130"/>
-            <Label Content="Norma" HorizontalAlignment="Left" Margin="269,305,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Width="136"/>
-            <Label Content="Paliwo" HorizontalAlignment="Left" Margin="570,305,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Width="125"/>
+            <Label Content="Droga" Name="TraveledWay"  HorizontalAlignment="Center" Margin="60,303,603.6,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Width="130"/>
+            <Label Content="Norma" Name="StandardFuel" HorizontalAlignment="Left" Margin="269,305,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Width="136"/>
+            <Label Content="Paliwo" Name="FuelUsed" HorizontalAlignment="Left" Margin="570,305,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Width="125"/>
             <Button Content="Button" HorizontalAlignment="Left" Margin="711,357,0,0" VerticalAlignment="Top" Width="54" Height="53" Foreground="{x:Null}" Click="Button_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="icons8-go-back-50.png" Stretch="Uniform"/>

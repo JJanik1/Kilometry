@@ -23,4 +23,3 @@ e) Database:
 
 f) Statistics:
 Tutaj bêd¹ klasy odpowiedzialne za wyœwietlanie statystyk i wykresów graficznych np. œrednie przejechane wartoœci w km itp.
-- Wykres 1 oraz 2 OxyPlot - to klasy graficzne (najprowdopodobniej u¿yjê biblioteki OxyPlot), która bêdzie tworzy³a diagramy/schematy graficzne statystyk.

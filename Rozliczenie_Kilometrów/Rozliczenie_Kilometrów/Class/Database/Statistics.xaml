@@ -3,7 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Rozliczenie_Kilometrów.Class.Database"
+        xmlns:DV="System.Windows.Controls.DataVisualization.Toolkit"
+        xmlns:DVC = "System.Windows.Controls.DataVisualization.Charting"
+        xmlns:DV1="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
         mc:Ignorable="d"
         Title="Statistics" Height="450" Width="800">
     <Grid Background="DarkGray">
@@ -15,11 +17,59 @@
                 <ImageBrush/>
             </Button.BorderBrush>
         </Button>
-        <TextBox HorizontalAlignment="Left" Height="189" Margin="10,10,0,0" TextWrapping="Wrap" Text="Tutaj będą statystyki w formie wykresów graficznych, zapytać o bibliotekę graficzną ;)" VerticalAlignment="Top" Width="466" FontSize="35" TextChanged="TextBox_TextChanged"/>
-        <Label Content="Łączna ilość przejechanych kilometrów:" HorizontalAlignment="Left" Margin="529,31,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label Content="Łączna ilość przejazdów:" HorizontalAlignment="Left" Margin="572,109,0,0" VerticalAlignment="Top" FontWeight="Bold" RenderTransformOrigin="0.497,2.055"/>
-        <Label Content="Wynik" HorizontalAlignment="Center" Margin="589,140,74.6,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Width="130"/>
-        <Label Content="Wynik" HorizontalAlignment="Center" Margin="589,62,74.6,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Width="130"/>
-        <TextBox HorizontalAlignment="Left" Height="189" Margin="10,204,0,0" TextWrapping="Wrap" Text="Tutaj będą statystyki w formie wykresów graficznych, zapytać o bibliotekę graficzną ;)" VerticalAlignment="Top" Width="466" FontSize="35" TextChanged="TextBox_TextChanged"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            
+            <!--<chartingToolkit:Chart Height="262" HorizontalAlignment="Left"  
+                                 Margin="33,0,0,620" Name="ColumnChart1" Title="Total Marks" 
+                                 VerticalAlignment="Bottom" Width="380">
+                <chartingToolkit:ColumnSeries DependentValuePath="Value"  IndependentValuePath="Key" ItemsSource="{Binding}" 
+                                              IsSelectionEnabled="True"></chartingToolkit:ColumnSeries>
+            </chartingToolkit:Chart>-->
+            <Grid Grid.Column="0" Grid.Row="0">
+                <DV1:Chart Canvas.Top="80" Canvas.Left="10" Name="mcChart" Width="500" Height="200" Background="LightSteelBlue" Title="Wykres procentowy przejechanych kilometrów">
+                    <DV1:Chart.Series>
+                        <DV1:PieSeries Title="Experience" IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}">
+                        </DV1:PieSeries>
+                    </DV1:Chart.Series>
+                </DV1:Chart>
+            </Grid>
+            <Grid Grid.Column="0" Grid.Row="1">
+                <DV1:Chart Canvas.Top="80" Canvas.Left="10" Name="mcChart2"
+                                          Width="500" Height="200"
+                                          Background="LightGreen" Title="Wykres zużycia paliwa" >
+                    <DV1:Chart.LegendStyle>
+                        <Style TargetType="Control">
+                            <Setter Property="Width" Value="0" />
+                            <Setter Property="Height" Value="0" />
+                        </Style>
+                    </DV1:Chart.LegendStyle>
+                    <DV1:Chart.Series>
+                        <DV1:ColumnSeries
+                            IndependentValueBinding="{Binding Path=Key}"
+                            DependentValueBinding="{Binding Path=Value}">
+                            </DV1:ColumnSeries>
+                    </DV1:Chart.Series>
+                    </DV1:Chart>
+
+            </Grid>
+            <StackPanel Grid.Column="1" Grid.Row="0" Grid.RowSpan="2">
+                <Label  Content="Łączna ilość przejechanych kilometrów:" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <Label Content="Wynik" Name="SumOfKilometers" FontWeight="Bold" FontSize="14" HorizontalAlignment="Center"/>
+
+                <Label  Content="Łączna ilość przejazdów:" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <Label Content="Wynik" Name="SumOfTravelers" FontWeight="Bold" FontSize="14" HorizontalAlignment="Center"/>
+            </StackPanel>
+            
+        </Grid>
+        
     </Grid>
 </Window>

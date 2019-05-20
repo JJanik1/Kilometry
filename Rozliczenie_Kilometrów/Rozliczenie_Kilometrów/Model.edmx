@@ -5,30 +5,20 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="PrzejazdyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'Przejazdy.dbo.Rozliczenie' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Rozliczenie">
           <Key>
-            <PropertyRef Name="Data_" />
+            <PropertyRef Name="Key" />
           </Key>
           <Property Name="Drive_List" Type="decimal" Precision="18" Scale="0" />
           <Property Name="Traveled_Way" Type="decimal" Precision="18" Scale="0" />
           <Property Name="Fuel_Used" Type="decimal" Precision="18" Scale="0" />
           <Property Name="Fuel_Standard" Type="decimal" Precision="18" Scale="0" />
-          <Property Name="Data_" Type="date" Nullable="false" />
+          <Property Name="Data_" Type="date" />
           <Property Name="Statistics" Type="image" />
+          <Property Name="Key" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
         </EntityType>
         <EntityContainer Name="PrzejazdyModelStoreContainer">
-          <EntitySet Name="Rozliczenie" EntityType="Self.Rozliczenie" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [Rozliczenie].[Drive_List] AS [Drive_List], 
-    [Rozliczenie].[Traveled_Way] AS [Traveled_Way], 
-    [Rozliczenie].[Fuel_Used] AS [Fuel_Used], 
-    [Rozliczenie].[Fuel_Standard] AS [Fuel_Standard], 
-    [Rozliczenie].[Data_] AS [Data_], 
-    [Rozliczenie].[Statistics] AS [Statistics]
-    FROM [dbo].[Rozliczenie] AS [Rozliczenie]</DefiningQuery>
-          </EntitySet>
+          <EntitySet Name="Rozliczenie" EntityType="Self.Rozliczenie" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
@@ -37,16 +27,17 @@ warning 6002: The table/view 'Przejazdy.dbo.Rozliczenie' does not have a primary
       <Schema Namespace="PrzejazdyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Rozliczenie">
           <Key>
-            <PropertyRef Name="Data_" />
+            <PropertyRef Name="Key" />
           </Key>
           <Property Name="Drive_List" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="Traveled_Way" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="Fuel_Used" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="Fuel_Standard" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="Data_" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Data_" Type="DateTime" Precision="0" />
           <Property Name="Statistics" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Key" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
         </EntityType>
-        <EntityContainer Name="PrzejazdyEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="PrzejazdyEntities4" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Rozliczenie" EntityType="Self.Rozliczenie" />
         </EntityContainer>
       </Schema>
@@ -54,7 +45,7 @@ warning 6002: The table/view 'Przejazdy.dbo.Rozliczenie' does not have a primary
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="PrzejazdyModelStoreContainer" CdmEntityContainer="PrzejazdyEntities1">
+        <EntityContainerMapping StorageEntityContainer="PrzejazdyModelStoreContainer" CdmEntityContainer="PrzejazdyEntities4">
           <EntitySetMapping Name="Rozliczenie">
             <EntityTypeMapping TypeName="PrzejazdyModel.Rozliczenie">
               <MappingFragment StoreEntitySet="Rozliczenie">
@@ -64,6 +55,7 @@ warning 6002: The table/view 'Przejazdy.dbo.Rozliczenie' does not have a primary
                 <ScalarProperty Name="Fuel_Standard" ColumnName="Fuel_Standard" />
                 <ScalarProperty Name="Data_" ColumnName="Data_" />
                 <ScalarProperty Name="Statistics" ColumnName="Statistics" />
+                <ScalarProperty Name="Key" ColumnName="Key" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

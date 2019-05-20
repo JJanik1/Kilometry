@@ -5,13 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Settlement_of_kilometers"
         mc:Ignorable="d"
-        Title="RideList" Height="446.739" Width="400">
+        Title="Lista przejazdów" Height="446.739" Width="400">
     <Grid>
 
-        <Label x:Name="Ride_List" Content="Lista przejazdów:" HorizontalAlignment="Left" Margin="30,58,0,0" VerticalAlignment="Top" Height="347" Width="163" FontSize="14" Background="#FFB9ACAC"/>
+
+        <ListView Margin="30,76,30,69" Name="ListOfTraveled">
+            <ListView.View>
+                
+                <GridView>
+                    <GridViewColumn Header="Id" DisplayMemberBinding="{Binding Id}"/>
+                    <GridViewColumn Header="Przebyta droga" DisplayMemberBinding="{Binding Traveled_Way}"/>
+                    <GridViewColumn Header="Norma zużytego paliwa" DisplayMemberBinding="{Binding FuelStandard}"/>
+                    <GridViewColumn Header="Zużyte paliwo" DisplayMemberBinding="{Binding FuelUsed}"/>
+                    <GridViewColumn Header="Data przejazdu" DisplayMemberBinding="{Binding Date}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
         <Label x:Name="Ridelist" Content="Lista przejazdów" HorizontalAlignment="Left" Margin="30,29,0,0" VerticalAlignment="Top" Width="143" FontWeight="Bold" FontSize="14" RenderTransformOrigin="0.162,0.39"/>
-        <Button x:Name="Remove_Ride" Content="Usuń przejazd" HorizontalAlignment="Left" Margin="231,200,0,0" VerticalAlignment="Top" Width="122" Height="37" FontWeight="Bold" FontSize="14"/>
-        <Button Content="Back" HorizontalAlignment="Left" Margin="336,352,0,0" VerticalAlignment="Top" Width="48" Height="53" FontWeight="Bold" FontSize="14" Foreground="{x:Null}" Click="Button_Click">
+        <Button x:Name="Remove_Ride" Content="Usuń przejazd" HorizontalAlignment="Left" Margin="30,361,0,0" VerticalAlignment="Top" Width="122" Height="37" FontWeight="Bold" FontSize="14" Click="Remove_Ride_Click"/>
+        <Button Content="Back" HorizontalAlignment="Left" Margin="314,353,0,0" VerticalAlignment="Top" Width="48" Height="53" FontWeight="Bold" FontSize="14" Foreground="{x:Null}" Click="Button_Click">
             <Button.Background>
                 <ImageBrush TileMode="Tile" ImageSource="icons8-go-back-50.png" Stretch="Uniform"/>
             </Button.Background>

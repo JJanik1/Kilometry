@@ -9,6 +9,7 @@ namespace Settlement_of_kilometers.Class.Calculations
 {
 
     //klasa wyliczająca zużycie paliwa
+    //TU JEST DOBRZE
     class Fuel_Used
     {
         //internal double AmountOfFuelConsumed
