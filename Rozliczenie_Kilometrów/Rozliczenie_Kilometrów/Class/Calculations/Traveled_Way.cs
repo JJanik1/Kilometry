@@ -11,7 +11,7 @@ namespace Settlement_of_kilometers.Class.Calculations
 {
 
     //klasa wyliczająca przemierzoną drogę
-    //TU JEST DOBRZE
+
     class Traveled_Way
     {
         // internal double RoadTraveled

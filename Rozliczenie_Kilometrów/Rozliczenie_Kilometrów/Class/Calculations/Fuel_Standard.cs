@@ -10,7 +10,7 @@ using Rozliczenie_Kilometrów.Class.Database;
 namespace Settlement_of_kilometers.Class.Calculations
 {
     //klasa wyliczająca normę paliwa
-    //TU MAM PROBLEM Z BAZĄ oraz z tym TASKIEM
+
     class Fuel_Standard
     {
         //internal double FuelStandart
@@ -24,10 +24,10 @@ namespace Settlement_of_kilometers.Class.Calculations
         //    }
         //  }
 
-       // Dodałem napaspacaca RozliczanieKilometrów bo tego tu brakowało
+    
        PrzejazdyEntities4 _przejazdyEntities = new PrzejazdyEntities4();
         
-       // Wszystko co zwracasz z metody asynchronicznej jest typu task więc zrobiłem Task<Task> i jest git
+       // Wszystko co zwracam z metody asynchronicznej jest typu task 
        internal async Task<Task> FuelStandart(double capacity)
        {
         var result = Task<double>.Run(() =>
@@ -38,6 +38,6 @@ namespace Settlement_of_kilometers.Class.Calculations
         
         return result;
         }
-        // Teraz się kompiluje
+        
     }
 }

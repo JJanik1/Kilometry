@@ -28,7 +28,7 @@ namespace Settlement_of_kilometers
         DateTime date;
 
         // Stworzyłem właściwości, więc możesz jakoś pozmieniać modyfikatory
-        // Możesz na przykład stworzyć właściwość, która zamienia km na mile i zapisuje do pola
+        // Można na przykład stworzyć właściwość, która zamienia km na mile i zapisuje do pola
         public double StardRoad { get => stardRoad; set => stardRoad = value; }
         public double EndRoad { get => endRoad; set => endRoad = value; }
         public double Capacity { get => capacity; set => capacity = value; }
@@ -43,7 +43,7 @@ namespace Settlement_of_kilometers
             date = DateTime.Now;
         }
 
-        // Twoje funkcje
+        // Funkcje
         public double traveledWay()
         {
             return endRoad - stardRoad;
@@ -69,7 +69,7 @@ namespace Settlement_of_kilometers
 
     public partial class Add_Ride : Window
     {
-        // Tworzę obiekt przejazd (nazwy możesz pozmieniać)
+        // Tworzę obiekt przejazd 
         Ride NewRide = new Ride();
 
         public Add_Ride()
@@ -146,10 +146,10 @@ namespace Settlement_of_kilometers
             
             PrzejazdyEntities4 context = new PrzejazdyEntities4();
 
-            // Tworzysz obiekt klasy entity wygenerowanej automatycznie na podstawie tabeli z bazy
+            // Tworze obiekt klasy entity wygenerowanej automatycznie na podstawie tabeli z bazy
             var Rozliczenie = new Rozliczenie()
             {
-                // ustawiasz zmienne w konstruktorze na te które chcesz zapisać do bazy
+                // ustawiam zmienne w konstruktorze na te które chce zapisać do bazy
                 Drive_List = 0,
                 Traveled_Way = Convert.ToDecimal(NewRide.traveledWay()),
                 Fuel_Used = Convert.ToDecimal(NewRide.fuelUsed()),
