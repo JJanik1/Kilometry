@@ -21,6 +21,7 @@ namespace RozliczenieKilometrów.Tests
         public void fill(Ride ride, double start, double end, double capacity, DateTime date)
         {
             ride.StardRoad = start;
+
             ride.EndRoad = end;
             ride.Capacity = capacity;
             ride.Date = date;
