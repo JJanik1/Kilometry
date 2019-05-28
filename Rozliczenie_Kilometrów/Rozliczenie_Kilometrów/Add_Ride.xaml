@@ -6,40 +6,69 @@
         xmlns:local="clr-namespace:Settlement_of_kilometers"
         mc:Ignorable="d"
         Title="Dodaj przejazd" Height="450" Width="800">
-    <Grid Background="DarkGray" RenderTransformOrigin="0.497,0.518">
-        <Grid Margin="10,-10,-10.4,10">
-            <Calendar x:Name="Calendar" HorizontalAlignment="Left" Margin="35,51,0,0" VerticalAlignment="Top" SelectionMode="SingleDate" SelectedDatesChanged="Calendar_OnSelectedDatesChanged"/>
-            <Label Content="Data:" FontWeight="Bold" Margin="106,20,0,369" HorizontalAlignment="Left" RenderTransformOrigin="1.29,0.537" Width="57"/>
-        </Grid>
-        <Button x:Name="AddRide" Content="Dodaj przejazd" HorizontalAlignment="Left" Margin="309,98,0,0" VerticalAlignment="Top" Width="101" FontWeight="Bold" Height="36" Click="AddRide_Click"/>
-        <Grid>
+    <Grid Background="DarkGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" MinWidth="250"/>
+            <ColumnDefinition Width="1*" MinWidth="200"/>
+            <ColumnDefinition Width="1*" MinWidth="250"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
 
-        </Grid>
-        <Grid>
-            <Label Content="Początkowa przejechana droga (km):" HorizontalAlignment="Left" Margin="438,20,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-            <TextBox x:Name="Initial_value_of_kilometers" HorizontalAlignment="Left" Height="23" Margin="438,45,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="230" RenderTransformOrigin="-0.105,-0.56" TextChanged="Initial_value_of_kilometers_TextChanged"/>
-            <Label Content="Wartość końcowa (km):" Margin="471,85,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontWeight="Bold"/>
-            <TextBox x:Name="The_final_value_of_kilometers"   HorizontalAlignment="Left" Height="23" Margin="438,111,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="230" TextChanged="The_final_value_of_kilometers_TextChanged"/>
-            <Label Content="Ładowność (tony):" HorizontalAlignment="Left" Margin="488,151,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-            <TextBox x:Name="Capacity" HorizontalAlignment="Left" Height="23" Margin="438,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" TextChanged="Capacity_TextChanged"/>
-        </Grid>
-        <Grid>
-            <Label Content="Wyliczenia:" HorizontalAlignment="Left" Margin="309,224,0,0" VerticalAlignment="Top" Width="116" Height="42" FontWeight="Bold" FontSize="20"/>
-            <Label Content="Przebyta droga:" HorizontalAlignment="Left" Margin="60,271,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
-            <Label Content="Norma zużytego paliwa:" HorizontalAlignment="Left" Margin="269,271,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
-            <Label Content="Ilość zużytego paliwa:" HorizontalAlignment="Left" Margin="570,277,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
-            <Label Content="Droga" Name="TraveledWay"  HorizontalAlignment="Center" Margin="60,303,603.6,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Width="130"/>
-            <Label Content="Norma" Name="StandardFuel" HorizontalAlignment="Left" Margin="269,305,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Width="136"/>
-            <Label Content="Paliwo" Name="FuelUsed" HorizontalAlignment="Left" Margin="570,305,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Width="125"/>
-            <Button Content="Button" HorizontalAlignment="Left" Margin="711,357,0,0" VerticalAlignment="Top" Width="54" Height="53" Foreground="{x:Null}" Click="Button_Click">
-                <Button.Background>
-                    <ImageBrush ImageSource="icons8-go-back-50.png" Stretch="Uniform"/>
-                </Button.Background>
-                <Button.BorderBrush>
-                    <ImageBrush/>
-                </Button.BorderBrush>
-            </Button>
+        <StackPanel Grid.Column="0" Margin="10">
+            <Label Content="Data:" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+            <Calendar x:Name="Calendar"  SelectionMode="SingleDate" SelectedDatesChanged="Calendar_OnSelectedDatesChanged"/>
+        </StackPanel>
+        <Button x:Name="AddRide" Content="Dodaj przejazd" Grid.Column="1" Width="101" FontWeight="Bold" Height="36" Click="AddRide_Click"/>
 
+        <Grid Grid.Column="2" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <Label Content="Początkowa przejechana droga (km):" Grid.Row="0" FontWeight="Bold" VerticalContentAlignment="Center"/>
+            <TextBox x:Name="Initial_value_of_kilometers" Grid.Row="1" TextWrapping="Wrap" TextChanged="Initial_value_of_kilometers_TextChanged" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+
+            <Label Content="Wartość końcowa (km):" Grid.Row="2" FontWeight="Bold" VerticalContentAlignment="Center"/>
+            <TextBox x:Name="The_final_value_of_kilometers" Grid.Row="3" TextWrapping="Wrap" TextChanged="The_final_value_of_kilometers_TextChanged" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+
+            <Label Content="Ładowność (tony):" Grid.Row="4"  FontWeight="Bold" VerticalContentAlignment="Center"/>
+            <TextBox x:Name="Capacity" Grid.Row="5" TextWrapping="Wrap" TextChanged="Capacity_TextChanged" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
         </Grid>
+
+        <Label Grid.Row="1" Grid.ColumnSpan="3" Content="Wyliczenia" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="20"/>
+
+        <StackPanel Grid.Row="2" Grid.Column="0">
+            <Label Content="Przebyta droga:" FontSize="16" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+            <Label Content="Droga" Name="TraveledWay" FontWeight="Bold" FontSize="14" HorizontalContentAlignment="Center"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="1">
+            <Label Content="Norma zużytego paliwa:" FontSize="16" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+            <Label Content="Norma" Name="StandardFuel" FontWeight="Bold" FontSize="14" HorizontalContentAlignment="Center"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="2">
+            <Label  Content="Ilość zużytego paliwa:" FontSize="16" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+            <Label Content="Paliwo" Name="FuelUsed" FontSize="14" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+        </StackPanel>
+
+        <Button Grid.Row="2" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="Button" Width="54" Height="53" Foreground="{x:Null}" Click="Button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="icons8-go-back-50.png" Stretch="Uniform"/>
+            </Button.Background>
+            <Button.BorderBrush>
+                <ImageBrush/>
+            </Button.BorderBrush>
+        </Button>
+
     </Grid>
 </Window>
