@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Rozliczenie_Kilometrów
+namespace Rozliczenie_Kilometrów.Class.Database
 {
     using System;
     using System.Data.Entity;

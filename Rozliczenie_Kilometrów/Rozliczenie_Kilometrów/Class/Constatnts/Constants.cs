@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Settlement_of_kilometers.Class.Constatnts
+﻿namespace Settlement_of_kilometers.Class.Constatnts
 {
 
     //klasa stała wyświetlająca błąd z regaxa, jeśli wpisujemy inne znaki niż cyfry

@@ -1,25 +1,10 @@
-﻿using Rozliczenie_Kilometrów;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using Rozliczenie_Kilometrów.Class.Database;
 
 namespace Settlement_of_kilometers
 {
-    /// <summary>
-    /// Logika interakcji dla klasy Add_Ride.xaml
-    /// </summary>
-    /// 
-
     public class Ride
     {
         double stardRoad;
@@ -27,8 +12,8 @@ namespace Settlement_of_kilometers
         double capacity;
         DateTime date;
 
-        // Stworzyłem właściwości, więc możesz jakoś pozmieniać modyfikatory
-        // Można na przykład stworzyć właściwość, która zamienia km na mile i zapisuje do pola
+     
+        // właściwości
         public double StardRoad { get => stardRoad; set => stardRoad = value; }
         public double EndRoad { get => endRoad; set => endRoad = value; }
         public double Capacity { get => capacity; set => capacity = value; }
@@ -69,7 +54,7 @@ namespace Settlement_of_kilometers
 
     public partial class Add_Ride : Window
     {
-        // Tworzę obiekt przejazd 
+        // Obiekt przejazd
         Ride NewRide = new Ride();
 
         public Add_Ride()
