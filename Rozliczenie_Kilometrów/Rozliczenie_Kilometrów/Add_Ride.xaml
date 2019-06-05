@@ -6,7 +6,13 @@
         xmlns:local="clr-namespace:Settlement_of_kilometers"
         mc:Ignorable="d"
         Title="Dodaj przejazd" Height="450" Width="800">
-    <Grid Background="DarkGray">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,0" StartPoint="0.5,1">
+            <GradientStop Color="AntiqueWhite" Offset="0"/>
+            <GradientStop Color="SteelBlue" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*" MinWidth="250"/>
             <ColumnDefinition Width="1*" MinWidth="200"/>
@@ -63,7 +69,7 @@
 
         <Button Grid.Row="2" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="Button" Width="54" Height="53" Foreground="{x:Null}" Click="Button_Click">
             <Button.Background>
-                <ImageBrush ImageSource="icons8-go-back-50.png" Stretch="Uniform"/>
+                <ImageBrush ImageSource="Source/icons8-go-back-50.png" Stretch="Uniform"/>
             </Button.Background>
             <Button.BorderBrush>
                 <ImageBrush/>

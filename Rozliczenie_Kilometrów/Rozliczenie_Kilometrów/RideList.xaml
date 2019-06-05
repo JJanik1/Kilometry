@@ -5,7 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Settlement_of_kilometers"
         mc:Ignorable="d"
-        Title="Lista przejazdów" Height="446.739" Width="400">
+        Title="Lista przejazdów" Height="446.739" Width="470">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,0" StartPoint="0.5,1">
+            <GradientStop Color="AntiqueWhite" Offset="0"/>
+            <GradientStop Color="SteelBlue" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
@@ -13,9 +19,9 @@
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
 
-        <Label Grid.Row="0" x:Name="Ridelist" Content="Lista przejazdów" HorizontalAlignment="Left" Margin="10,0,10,0" Width="143" FontWeight="Bold" FontSize="14" VerticalContentAlignment="Center"/>
+        <Label Grid.Row="0" x:Name="Ridelist" Content="Lista przejazdów" HorizontalAlignment="Left" Margin="10,0,10,0" Width="143" FontWeight="Bold" FontSize="16" VerticalContentAlignment="Center"/>
 
-        <ListView Grid.Row="1" Margin="10, 0, 10, 0" Name="ListOfTraveled">
+        <ListView Grid.Row="1" Margin="10, 0, 10, 0" Name="ListOfTraveled" RenderTransformOrigin="0.5,0.5">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Id" DisplayMemberBinding="{Binding Id}"/>
@@ -30,7 +36,7 @@
         <Button Grid.Row="2" x:Name="Remove_Ride" Content="Usuń przejazd" HorizontalAlignment="Left" Margin="10, 0, 10, 0" Width="122" Height="37" FontWeight="Bold" FontSize="14" Click="Remove_Ride_Click"/>
         <Button Grid.Row="2" Content="Back" HorizontalAlignment="Right" Margin="10, 0, 10, 0" Width="48" Height="53" FontWeight="Bold" FontSize="14" Foreground="{x:Null}" Click="Button_Click">
             <Button.Background>
-                <ImageBrush TileMode="Tile" ImageSource="icons8-go-back-50.png" Stretch="Uniform"/>
+                <ImageBrush TileMode="Tile" ImageSource="Source/icons8-go-back-50.png" Stretch="Uniform"/>
             </Button.Background>
             <Button.BorderBrush>
                 <ImageBrush/>

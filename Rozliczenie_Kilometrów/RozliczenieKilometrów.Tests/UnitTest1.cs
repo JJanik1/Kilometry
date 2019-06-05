@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RozliczenieKilometrów;
+using Rozliczenie_Kilometrów.Class.AddRide;
 using Settlement_of_kilometers;
 
 namespace RozliczenieKilometrów.Tests

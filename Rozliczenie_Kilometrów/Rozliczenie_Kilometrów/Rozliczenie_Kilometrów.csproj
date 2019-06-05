@@ -36,7 +36,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <ApplicationIcon>Source\icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -121,6 +121,8 @@
       <DependentUpon>Add_Ride.xaml</DependentUpon>
     </Compile>
     <Compile Include="Class\Constatnts\Constants.cs" />
+    <Compile Include="Class\AddRide\Ride.cs" />
+    <Compile Include="Class\RideList\RideList.cs" />
     <Compile Include="Statistics.xaml.cs">
       <DependentUpon>Statistics.xaml</DependentUpon>
     </Compile>
@@ -177,18 +179,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="icons8-go-back-50.png" />
+    <Resource Include="Source\icons8-go-back-50.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Class\AddRide\" />
-    <Folder Include="Class\RideList\" />
-    <Folder Include="Class\Statistics\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="icon.ico" />
+    <Resource Include="Source\icon.ico" />
     <Content Include="Class\Database\Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model.edmx</DependentUpon>

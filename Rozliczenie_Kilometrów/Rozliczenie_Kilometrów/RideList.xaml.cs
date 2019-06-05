@@ -1,22 +1,14 @@
 ﻿using System.Linq;
 using System.Windows;
 using Rozliczenie_Kilometrów.Class.Database;
+using Rozliczenie_Kilometrów.Class.RideList;
 
 namespace Settlement_of_kilometers
 {
- 
-
-    public class Row
-    {
-        public string Id { get; set; }
-        public string Traveled_Way { get; set; }
-        public string FuelStandard { get; set; }
-        public string FuelUsed { get; set; }
-        public string Date { get; set; }
-    }
-
     public partial class RideList : Window  
     {
+
+        //pobranie z bazy listy dodanych przejazdów ora wyświetlenie ich
         public RideList()
         {
             InitializeComponent();
@@ -26,11 +18,12 @@ namespace Settlement_of_kilometers
 
             foreach (var przejazd in przejazdy)
             {
-                ListOfTraveled.Items.Add(new Row { Id = przejazd.Key.ToString(), Traveled_Way = przejazd.Traveled_Way.ToString() + " km", FuelStandard = przejazd.Fuel_Standard.ToString() + " l", FuelUsed = przejazd.Fuel_Used.ToString() + " l", Date = przejazd.Data_.Value.ToString("dd/MM/yyyy") });
+                ListOfTraveled.Items.Add(new Rozliczenie_Kilometrów.Class.RideList.RideList { Id = przejazd.Key.ToString(), Traveled_Way = przejazd.Traveled_Way.ToString() + " km", FuelStandard = przejazd.Fuel_Standard.ToString() + " l", FuelUsed = przejazd.Fuel_Used.ToString() + " l", Date = przejazd.Data_.Value.ToString("dd/MM/yyyy") });
             }
 
         }
 
+        //przycisk powrotu
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = new MainWindow();
@@ -40,11 +33,12 @@ namespace Settlement_of_kilometers
             this.Close();
         }
 
+        //usunięcie dodanego przejazdu
         private void Remove_Ride_Click(object sender, RoutedEventArgs e)
         {
             if (ListOfTraveled.SelectedItem == null) return;
 
-            var row = ListOfTraveled.SelectedItem as Row;
+            var row = ListOfTraveled.SelectedItem as Rozliczenie_Kilometrów.Class.RideList.RideList;
 
             PrzejazdyEntities4 context = new PrzejazdyEntities4();
 

@@ -8,10 +8,16 @@
         xmlns:DV1="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
         mc:Ignorable="d"
         Title="Statistics" Height="450" Width="800">
-    <Grid Background="DarkGray">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,0" StartPoint="0.5,1">
+            <GradientStop Color="WhiteSmoke" Offset="0"/>
+            <GradientStop Color="SteelBlue" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
         <Button Content="Button" HorizontalAlignment="Right"  VerticalAlignment="Bottom" Width="54" Height="53" Foreground="{x:Null}" Click="Button_Click" RenderTransformOrigin="0.848,-0.027">
             <Button.Background>
-                <ImageBrush ImageSource="/Rozliczenie_Kilometrów;component/icons8-go-back-50.png" Stretch="Uniform"/>
+                <ImageBrush ImageSource="/Source/icons8-go-back-50.png" Stretch="Uniform"/>
             </Button.Background>
             <Button.BorderBrush>
                 <ImageBrush/>

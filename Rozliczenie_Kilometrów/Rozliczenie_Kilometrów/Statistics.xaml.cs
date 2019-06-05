@@ -7,7 +7,6 @@ using Settlement_of_kilometers;
 
 namespace Rozliczenie_Kilometrów.Class.Database
 {
- 
     public partial class Statistics : Window
     {
         public Statistics()
