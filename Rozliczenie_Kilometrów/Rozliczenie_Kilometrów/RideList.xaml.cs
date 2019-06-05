@@ -49,7 +49,6 @@ namespace Settlement_of_kilometers
             context.Rozliczenie.Attach(toRemove);
             context.Rozliczenie.Remove(toRemove);
             context.SaveChanges();
-
             ListOfTraveled.Items.RemoveAt(ListOfTraveled.SelectedIndex);
         }
     }

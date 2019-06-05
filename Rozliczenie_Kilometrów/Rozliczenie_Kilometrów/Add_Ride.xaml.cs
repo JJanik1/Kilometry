@@ -76,6 +76,7 @@ namespace Settlement_of_kilometers
             this.Close();
         }
 
+        //komunikat o ponownym wypełnieniu komentarza
         private void AddRide_Click(object sender, RoutedEventArgs e)
         {
             if (NewRide.DataCompleted() == false)
@@ -103,6 +104,8 @@ namespace Settlement_of_kilometers
 
         }
 
+
+        //kalendarz
         private void Calendar_OnSelectedDatesChanged(object sender, SelectionChangedEventArgs e)
         {
             NewRide.Date = Calendar.SelectedDate.Value;

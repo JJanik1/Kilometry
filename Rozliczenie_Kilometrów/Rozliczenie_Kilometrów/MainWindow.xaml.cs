@@ -6,6 +6,8 @@ namespace Settlement_of_kilometers
 
     public partial class MainWindow : Window
     {
+
+        //przyciski powrotów z innych okien do menu głównego
         public MainWindow()
         {
             InitializeComponent();
